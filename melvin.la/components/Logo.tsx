@@ -1,31 +1,31 @@
-import { ReactComponent as Android } from "./svg/android.svg";
-import { ReactComponent as Angular } from "./svg/angular.svg";
-import { ReactComponent as Apple } from "./svg/apple.svg";
-import { ReactComponent as Aws } from "./svg/aws.svg";
-import { ReactComponent as C } from "./svg/c.svg";
-import { ReactComponent as Cpp } from "./svg/cpp.svg";
-import { ReactComponent as Django } from "./svg/django.svg";
-import { ReactComponent as Docker } from "./svg/docker.svg";
-import { ReactComponent as ElasticSearch } from "./svg/elasticsearch.svg";
-import { ReactComponent as Electron } from "./svg/electron.svg";
-import { ReactComponent as Git } from "./svg/git.svg";
-import { ReactComponent as Go } from "./svg/go.svg";
-import { ReactComponent as GoogleCloud } from "./svg/google-cloud.svg";
-import { ReactComponent as Grpc } from "./svg/grpc.svg";
-import { ReactComponent as Heroku } from "./svg/heroku.svg";
-import { ReactComponent as Java } from "./svg/java.svg";
-import { ReactComponent as Javascript } from "./svg/javascript.svg";
-import { ReactComponent as Mongodb } from "./svg/mongodb.svg";
-import { ReactComponent as Mysql } from "./svg/mysql.svg";
-import { ReactComponent as Nodejs } from "./svg/nodejs.svg";
-import { ReactComponent as Postgres } from "./svg/postgres.svg";
-import { ReactComponent as Python } from "./svg/python.svg";
-import { ReactComponent as Reactjs } from "./svg/reactjs.svg";
-import { ReactComponent as Reasonml } from "./svg/reasonml.svg";
-import { ReactComponent as Redis } from "./svg/redis.svg";
-import { ReactComponent as Swift } from "./svg/swift.svg";
-import { ReactComponent as Typescript } from "./svg/typescript.svg";
-import { ReactComponent as Unknown } from "./svg/unknown.svg";
+import Android from "./svg/android.svg";
+import Angular from "./svg/angular.svg";
+import Apple from "./svg/apple.svg";
+import Aws from "./svg/aws.svg";
+import C from "./svg/c.svg";
+import Cpp from "./svg/cpp.svg";
+import Django from "./svg/django.svg";
+import Docker from "./svg/docker.svg";
+import ElasticSearch from "./svg/elasticsearch.svg";
+import Electron from "./svg/electron.svg";
+import Git from "./svg/git.svg";
+import Go from "./svg/go.svg";
+import GoogleCloud from "./svg/google-cloud.svg";
+import Grpc from "./svg/grpc.svg";
+import Heroku from "./svg/heroku.svg";
+import Java from "./svg/java.svg";
+import Javascript from "./svg/javascript.svg";
+import Mongodb from "./svg/mongodb.svg";
+import Mysql from "./svg/mysql.svg";
+import Nodejs from "./svg/nodejs.svg";
+import Postgres from "./svg/postgres.svg";
+import Python from "./svg/python.svg";
+import Reactjs from "./svg/reactjs.svg";
+import Reasonml from "./svg/reasonml.svg";
+import Redis from "./svg/redis.svg";
+import Swift from "./svg/swift.svg";
+import Typescript from "./svg/typescript.svg";
+import Unknown from "./svg/unknown.svg";
 
 export {
   Android,
@@ -58,7 +58,7 @@ export {
   Unknown,
 };
 
-export default function Logo() {
+export default function Logo({ name }: { name: string }) {
   switch (name) {
     case "android":
       return <Android />;

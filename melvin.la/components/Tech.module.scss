@@ -1,0 +1,40 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .content {
+    text-align: left;
+    width: 100%;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 1em;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% * (1 / 3) - 10px - 1px);
+      padding-top: var(--space-lg);
+
+      border: none;
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+.inverted {
+  flex-direction: row-reverse;
+
+  .content {
+    text-align: right;
+  }
+}

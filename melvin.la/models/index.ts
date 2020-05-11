@@ -17,13 +17,7 @@ export interface Logo {
     url: string;
 }
 
-export interface BackendOps {
-    title: string;
-    content: string[];
-    logos: Logo[];
-}
-
-export interface ClientTech {
+export interface TechInfo {
     title: string;
     content: string[];
     logos: Logo[];
@@ -32,8 +26,8 @@ export interface ClientTech {
 export interface Pages {
     about: About;
     contact: Contact;
-    backendOps: BackendOps;
-    clientTech: ClientTech;
+    backendOps: TechInfo;
+    clientTech: TechInfo;
 }
 
 export interface DB {

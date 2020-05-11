@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import Section from "../components/Section";
 import Header from "../components/Header";
 import About from "../components/About";
+import Tech from "../components/Tech";
 import db from "./db.json";
 import { DB } from "../models";
 
@@ -20,7 +21,7 @@ export default function Home({ pages }: DB) {
           pictureUrl={pages.about.pictureUrl}
         />
       </Section>
-      {/* <Section>
+      <Section>
         <Tech
           title={pages.backendOps.title}
           content={pages.backendOps.content}
@@ -32,10 +33,10 @@ export default function Home({ pages }: DB) {
           title={pages.clientTech.title}
           content={pages.clientTech.content}
           logos={pages.clientTech.logos}
-          inverted=true
+          inverted={true}
         />
       </Section>
-      <Section fullscreen=true>
+      {/* <Section fullscreen=true>
         <Contact
           email={pages.contact.email}
           linkedInHandle={pages.contact.linkedInHandle}

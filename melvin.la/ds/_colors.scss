@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #1f1f23;
+  --color-accent: #26ace6;
+
+  --color-text: #fffefb;
+  --color-border: rgba(255, 255, 255, 0.35);
+}
+
+@supports (--css: variables) {
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-primary: #fffefb;
+      --color-accent: #26ace6;
+
+      --color-text: #1f1f23;
+      --color-border: #d1d0d2;
+    }
+  }
+}

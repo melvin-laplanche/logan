@@ -1,0 +1,27 @@
+.root {
+  .center {
+    max-width: 62em;
+    margin: 0 auto;
+    margin-top: var(--space-giant);
+    margin-bottom: var(--space-lg);
+
+    .items {
+      display: flex;
+      flex-direction: row;
+
+      span {
+        a {
+          border: none;
+        }
+
+        text-align: center;
+        flex-grow: 1;
+      }
+    }
+  }
+  .map {
+    width: 100% !important;
+    height: 800px !important;
+    position: relative !important;
+  }
+}

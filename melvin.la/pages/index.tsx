@@ -4,6 +4,7 @@ import Section from "../components/Section";
 import Header from "../components/Header";
 import About from "../components/About";
 import Tech from "../components/Tech";
+import Contact from "../components/Contact";
 import db from "./db.json";
 import { DB } from "../models";
 
@@ -36,14 +37,15 @@ export default function Home({ pages }: DB) {
           inverted={true}
         />
       </Section>
-      {/* <Section fullscreen=true>
+
+      <Section fullScreen={true}>
         <Contact
           email={pages.contact.email}
           linkedInHandle={pages.contact.linkedInHandle}
           githubHandle={pages.contact.githubHandle}
         />
       </Section>
-      <Section> <Footer /> </Section> */}
+      {/* <Section> <Footer /> </Section> */}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 // next.config.js
 const withSass = require('@zeit/next-sass')
+const env = require('./env.js')
 
 module.exports = withSass({
   cssModules: true,
@@ -14,5 +15,8 @@ module.exports = withSass({
       ],
     });
     return config;
+  },
+  env: {
+    ...env,
   }
 })

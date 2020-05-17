@@ -8,16 +8,17 @@
   --color-barely-visible: #ffffff30;
 }
 
-@supports (--css: variables) {
-  @media (prefers-color-scheme: light) {
-    :root {
-      --color-primary: #fffefb;
-      --color-accent: #26ace6;
+// TODO(melvin): Colors need more work to look good
+// @supports (--css: variables) {
+//   @media (prefers-color-scheme: light) {
+//     :root {
+//       --color-primary: #fffefb;
+//       --color-accent: #26ace6;
 
-      --color-text: #1f1f23;
-      --color-border: #d1d0d2;
+//       --color-text: #1f1f23;
+//       --color-border: #d1d0d2;
 
-      --color-barely-visible: #ffffff40;
-    }
-  }
-}
+//       --color-barely-visible: #00000040;
+//     }
+//   }
+// }

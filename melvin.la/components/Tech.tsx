@@ -28,8 +28,8 @@ export default function Tech({
       </div>
       <div className={styles.content}>
         <h2>{title}</h2>
-        {content.map((c) => (
-          <p>{c}</p>
+        {content.map((c, i) => (
+          <p key={i}>{c}</p>
         ))}
       </div>
     </div>

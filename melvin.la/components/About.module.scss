@@ -47,18 +47,12 @@
   }
 }
 
-// @media screen and (max-width: 320px) {
-// }
-// @media screen and (min-width: 321px) and (max-width: 679px) {
-// }
 @media screen and (max-width: 739px) {
   .about {
     flex-direction: column;
 
     .picture {
-      img {
-        width: 12em;
-      }
+      display: none;
     }
   }
 }

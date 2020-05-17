@@ -31,5 +31,32 @@
   .subtitle {
     margin: 0 auto;
     font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .root h1 {
+    font-size: var(--text-lg);
+  }
+
+  .root .subtitle {
+    font-size: var(--text-sm);
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 959px) {
+  .root h1 {
+    font-size: var(--text-xxl);
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .root h1 {
+    :global {
+      .simplified-svg-logo {
+        //margin-right: 0.3em;
+      }
+    }
   }
 }

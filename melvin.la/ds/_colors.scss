@@ -4,6 +4,8 @@
 
   --color-text: #fffefb;
   --color-border: rgba(255, 255, 255, 0.35);
+
+  --color-barely-visible: #ffffff30;
 }
 
 @supports (--css: variables) {
@@ -14,6 +16,8 @@
 
       --color-text: #1f1f23;
       --color-border: #d1d0d2;
+
+      --color-barely-visible: #ffffff40;
     }
   }
 }

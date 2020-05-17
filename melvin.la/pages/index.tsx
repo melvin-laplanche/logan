@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Tech from "../components/Tech";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import db from "./db.json";
 import { DB } from "../models";
 
@@ -14,6 +15,7 @@ export default function Home({ pages }: DB) {
       <Section>
         <Header />
       </Section>
+
       <Section>
         <About
           title={pages.about.title}
@@ -22,6 +24,7 @@ export default function Home({ pages }: DB) {
           pictureUrl={pages.about.pictureUrl}
         />
       </Section>
+
       <Section>
         <Tech
           title={pages.backendOps.title}
@@ -29,6 +32,7 @@ export default function Home({ pages }: DB) {
           logos={pages.backendOps.logos}
         />
       </Section>
+
       <Section>
         <Tech
           title={pages.clientTech.title}
@@ -45,7 +49,10 @@ export default function Home({ pages }: DB) {
           githubHandle={pages.contact.githubHandle}
         />
       </Section>
-      {/* <Section> <Footer /> </Section> */}
+
+      <Section>
+        <Footer />
+      </Section>
     </div>
   );
 }

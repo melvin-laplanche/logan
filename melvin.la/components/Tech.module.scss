@@ -38,3 +38,15 @@
     text-align: right;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .root .logos .logo {
+    width: calc(100% * (1 / 2) - 10px - 1px);
+  }
+}
+
+@media screen and (max-width: 739px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}

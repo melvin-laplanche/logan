@@ -33,3 +33,15 @@
       var(--text-scale-ratio)
   );
 }
+
+@media screen and (max-width: 460px) {
+  :root {
+    --text-scale-ratio: 1.1;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  :root {
+    --text-base-size: 12pt;
+  }
+}

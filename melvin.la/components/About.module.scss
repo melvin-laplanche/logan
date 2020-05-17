@@ -1,6 +1,7 @@
 .about {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   .content {
     text-align: right;
@@ -42,6 +43,42 @@
       border-radius: 100%;
       display: block;
       width: 16.5em;
+    }
+  }
+}
+
+// @media screen and (max-width: 320px) {
+// }
+// @media screen and (min-width: 321px) and (max-width: 679px) {
+// }
+@media screen and (max-width: 739px) {
+  .about {
+    flex-direction: column;
+
+    .picture {
+      img {
+        width: 12em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 740px) and (max-width: 959px) {
+  .about {
+    .picture {
+      img {
+        width: 13em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .about {
+    .picture {
+      img {
+        width: 14em;
+      }
     }
   }
 }

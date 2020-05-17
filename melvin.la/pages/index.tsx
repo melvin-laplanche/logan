@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 import Section from "../components/Section";
 import Header from "../components/Header";
@@ -12,6 +13,11 @@ import { DB } from "../models";
 export default function Home({ pages }: DB) {
   return (
     <div>
+      <Head>
+        <title>Melvin Laplanche</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Section>
         <Header />
       </Section>

@@ -9,3 +9,15 @@
   --space-xxl: calc(5.25 * var(--space-unit));
   --space-giant: calc(10 * var(--space-unit));
 }
+
+@media screen and (max-width: 739px) {
+  :root {
+    --space-unit: 0.6em;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  :root {
+    --space-unit: 0.4em;
+  }
+}

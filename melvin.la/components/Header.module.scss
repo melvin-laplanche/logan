@@ -50,13 +50,3 @@
     font-size: var(--text-xxl);
   }
 }
-
-@media screen and (max-width: 679px) {
-  .root h1 {
-    :global {
-      .simplified-svg-logo {
-        //margin-right: 0.3em;
-      }
-    }
-  }
-}

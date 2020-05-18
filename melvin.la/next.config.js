@@ -1,6 +1,12 @@
 // next.config.js
 const withSass = require('@zeit/next-sass')
-const env = require('./env.js')
+let env = {}
+
+try {
+  env = require('./env.js');
+} catch {
+  // it's fine, data might be loaded from the env
+}
 
 module.exports = withSass({
   cssModules: true,

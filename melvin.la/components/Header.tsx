@@ -16,7 +16,7 @@ export default function Header() {
       </h1>
       <div className={styles.subtitle}>
         FULL STACK ENGINEER BUILDING COOL STUFF AT
-        <a href="www.abstract.com"> ABSTRACT </a>
+        <a href="https://www.abstract.com"> ABSTRACT </a>
       </div>
     </header>
   );

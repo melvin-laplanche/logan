@@ -16,6 +16,8 @@ export default function Home({ pages }: DB) {
       <Head>
         <title>Melvin Laplanche</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+        <link href="/favicon-180.png" rel="apple-touch-icon" />
       </Head>
 
       <Section>

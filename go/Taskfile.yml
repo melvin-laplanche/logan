@@ -1,0 +1,14 @@
+version: "2"
+
+tasks:
+  build:
+    cmds:
+      - go build -i -v -o ./bin/api github.com/Nivl/logan/cmd/api
+
+  dev:
+    deps: [build]
+    cmds:
+      - ./bin/api
+    sources:
+      - ./**/*.go
+      - go.mod

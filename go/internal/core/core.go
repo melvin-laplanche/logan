@@ -1,3 +1,6 @@
+// Package core contains core methods, struct, and interfaces needed
+// for for the core workflow of the app. The core workflow represents
+// dependencies, requests, etc.
 package core
 
 import (

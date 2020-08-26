@@ -10,13 +10,10 @@ issues:
   # G104 is used for errcheck. It gets triggered on places that don't
   #      don't need it like (*bytes.Buffer).Write(), and we already have
   #      errcheck.
-  # G304 is used to warn about file inclusion via variable. It basically
-  #      blocks every `os.File(variable)`
   exclude-rules:
     - linters:
         - gosec
-      # for G306 and G301: https://github.com/golangci/golangci-lint/issues/177
-      text: "G104|G304|G110|G306|G301|G505|G401"
+      text: "G104"
 
     - linters:
         - govet
@@ -28,15 +25,7 @@ issues:
       linters:
         - errcheck
         - gosec
-        - goerr113
         - maligned
-
-    # No need to check for non-wrapped errors in cmd/ since most
-    # command might return inline errors
-    - path: cmd/
-      linters:
-        - goerr113
-      text: "do not define dynamic errors"
 
 linters:
   enable:
@@ -69,7 +58,6 @@ linters:
     - gochecknoinits
     - whitespace
     - goprintffuncname
-    - goerr113
     - exhaustive
     - nolintlint
     - noctx

@@ -1,3 +1,4 @@
+// Package logger contains interfaces and implementations to log data
 package logger
 
 // Logger is an interface used to persist logs

@@ -7,6 +7,7 @@ import (
 	"github.com/labstack/echo"
 )
 
+// Register creates the routes needed for dealing with users
 func Register(e *echo.Group, deps *core.Dependencies) {
 	e.POST("/", core.NewRequest(handlers.CreateUser))
 }

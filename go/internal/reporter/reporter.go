@@ -1,3 +1,5 @@
+// Package reporter contains interfaces and implementations to report
+// issues to a bug tracker
 package reporter
 
 import (

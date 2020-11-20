@@ -9,5 +9,5 @@ import (
 
 // Register creates the routes needed for dealing with users
 func Register(e *echo.Group, deps *core.Dependencies) {
-	e.GET("/", core.NewRequest(handlers.Check))
+	e.GET("", core.NewRequest(handlers.Check))
 }

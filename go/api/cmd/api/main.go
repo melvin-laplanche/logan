@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/melvin-laplanche/logan/api/cmd/api/router"
 	"context"
 	"fmt"
 	"log"
@@ -13,7 +14,6 @@ import (
 	"github.com/melvin-laplanche/logan/shared/reporter"
 
 	"github.com/melvin-laplanche/logan/api/core"
-	"github.com/melvin-laplanche/logan/api/service/health"
 
 	"github.com/kelseyhightower/envconfig"
 )
@@ -59,10 +59,8 @@ func main() {
 	// We make sure all the events have been reported
 	defer deps.Reporter.Flush(10 * time.Second)
 
-	e := core.NewEchoConf(deps)
+	e := router.NewRouter(deps)
 	e.Debug = p.Debug
-
-	health.Register(e.Group("/health"), deps)
 
 	go func() {
 		if err = e.Start(":" + p.Port); err != nil {

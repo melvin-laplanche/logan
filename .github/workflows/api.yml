@@ -71,7 +71,7 @@ jobs:
 
       - name: Runs tests
         working-directory: ./go
-        run: go test -race -coverprofile ../c.out ./...
+        run: go test -race -coverprofile ./c.out ./...
 
       - name: Report coverage
         if: always()
@@ -79,4 +79,5 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
           GIT_COMMIT_SHA: ${{ github.sha }}
           GIT_BRANCH: ${{ steps.extract_branch.outputs.branch }}
-        run: ./cc-test-reporter after-build -p github.com/melvin-laplanche/logan/
+        run: ../cc-test-reporter after-build -p github.com/melvin-laplanche/logan/
+        working-directory: ./go

@@ -4,6 +4,7 @@
 package core
 
 import (
+	"errors"
 	"fmt"
 	"net/http"
 
@@ -34,13 +35,14 @@ func errorHandler(err error, c echo.Context) {
 	code := http.StatusInternalServerError
 	var msg interface{}
 
-	he, ok := err.(*echo.HTTPError)
+	var he *echo.HTTPError
+	ok := errors.As(err, &he)
 	switch {
 	case ok:
 		code = he.Code
 		msg = he.Message
 		if he.Internal != nil {
-			err = fmt.Errorf("%v, %v", err, he.Internal)
+			err = fmt.Errorf("%s, %w", err.Error(), he.Internal)
 		}
 	case c.Echo().Debug:
 		msg = err.Error()

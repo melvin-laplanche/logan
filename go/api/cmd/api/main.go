@@ -1,13 +1,14 @@
 package main
 
 import (
-	"github.com/melvin-laplanche/logan/api/cmd/api/router"
 	"context"
 	"fmt"
 	"log"
 	"os"
 	"os/signal"
 	"time"
+
+	"github.com/melvin-laplanche/logan/api/cmd/api/router"
 
 	"github.com/melvin-laplanche/logan/shared/logger"
 

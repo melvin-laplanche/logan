@@ -1,15 +1,16 @@
 package handlers_test
 
 import (
-	"github.com/melvin-laplanche/logan/api/core"
 	"encoding/json"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+
+	"github.com/melvin-laplanche/logan/api/cmd/api/router"
+	"github.com/melvin-laplanche/logan/api/core"
 	"github.com/melvin-laplanche/logan/api/service/health/handlers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"net/http"
-	"github.com/melvin-laplanche/logan/api/cmd/api/router"
-	"net/http/httptest"
-	"testing"
 )
 
 func TestCheck(t *testing.T) {

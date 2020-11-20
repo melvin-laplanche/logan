@@ -7,10 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
-
-      - name: Run Nancy
+      - name: Generate go.list
         working-directory: ./go
-        run: go list -m all | docker run -i sonatypecommunity/nancy:v0
+        run: go list -json -m all > ../go.list
+      - name: Run Nancy
+        uses: sonatype-nexus-community/nancy-github-action@main
 
   lint:
     name: Lint

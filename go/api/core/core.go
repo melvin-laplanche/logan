@@ -42,7 +42,7 @@ func errorHandler(err error, c echo.Context) {
 		code = he.Code
 		msg = he.Message
 		if he.Internal != nil {
-			err = fmt.Errorf("%s: %w", err.Error(), he.Internal) //nolint:errorlint
+			err = fmt.Errorf("%s: %w", err.Error(), he.Internal) //nolint:errorlint // can't have more than one %w
 		}
 	case c.Echo().Debug:
 		msg = err.Error()

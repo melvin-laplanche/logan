@@ -1,0 +1,27 @@
+version: "2"
+
+tasks:
+  build:
+    cmds:
+      - go build -i -v -o ./bin/api github.com/melvin-laplanche/logan/api/cmd/api
+
+  api-local-dev:
+    deps: [build]
+    cmds:
+      - ./bin/api
+    sources:
+      - ./api/**/*.go
+      - go.mod
+
+  start:
+    cmds:
+      - docker-compose up --build
+
+  deps-upgrade:
+    cmds:
+      - go get -t -u ./...
+      - go mod tidy
+
+  test:
+    cmds:
+      - go test -race ./...

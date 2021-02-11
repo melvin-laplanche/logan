@@ -30,6 +30,7 @@ export default function Home({ pages }: DB) {
           content={pages.about.content}
           resumeUrl={pages.about.resumeUrl}
           pictureUrl={pages.about.pictureUrl}
+          blogUrl={pages.about.blogUrl}
         />
       </Section>
 

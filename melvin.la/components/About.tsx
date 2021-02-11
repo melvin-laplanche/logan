@@ -8,11 +8,13 @@ export default function About({
   content,
   resumeUrl,
   pictureUrl,
+  blogUrl,
 }: {
   title: string;
   content: string;
   resumeUrl: string;
   pictureUrl: string;
+  blogUrl: string;
 }) {
   return (
     <div>
@@ -20,12 +22,14 @@ export default function About({
         <div className={styles.content}>
           <h2> {title} </h2>
           <p> {content} </p>
-          <a href={resumeUrl} className={styles.resume}>
-            <div className={styles["simplified-svg-logo"]}>
-              <AngleRightIcon />
-            </div>
-            Download my Resume
-          </a>
+          <div className={styles.links}>
+            <a href={blogUrl} className={styles.blog}>
+              Checkout my Blog
+            </a>
+            <a href={resumeUrl} className={styles.resume}>
+              Download my Resume
+            </a>
+          </div>
         </div>
         <div className={styles.picture}>
           <img src={pictureUrl} alt="me" />

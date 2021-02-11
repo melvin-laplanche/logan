@@ -24,14 +24,12 @@ body {
   font-weight: 300;
 }
 
-:global {
-  .simplified-svg-logo {
-    svg {
-      fill: var(--color-text);
-    }
+.simplified-svg-logo {
+  svg {
+    fill: var(--color-text);
   }
+}
 
-  .text-accent {
-    color: var(--color-accent);
-  }
+.text-accent {
+  color: var(--color-accent);
 }

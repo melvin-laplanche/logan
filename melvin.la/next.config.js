@@ -1,21 +1,19 @@
 // next.config.js
-const withSass = require('@zeit/next-sass')
-let env = {}
+let env = {};
 
 try {
-  env = require('./env.js');
+  env = require("./env.js");
 } catch {
   // it's fine, data might be loaded from the env
 }
 
-module.exports = withSass({
-  cssModules: true,
-  webpack (config, options) {
+module.exports = {
+  webpack(config, options) {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
         {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {},
         },
       ],
@@ -24,5 +22,5 @@ module.exports = withSass({
   },
   env: {
     ...env,
-  }
-})
+  },
+};

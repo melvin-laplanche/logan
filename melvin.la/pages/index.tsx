@@ -18,6 +18,8 @@ export default function Home({ pages }: DB) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
         <link href="/favicon-180.png" rel="apple-touch-icon" />
+
+        <script async defer src="https://beampipe.io/js/tracker.js" data-beampipe-domain="melvin.la"></script>
       </Head>
 
       <Section>

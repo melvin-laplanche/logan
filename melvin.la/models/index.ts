@@ -1,35 +1,36 @@
 export interface About {
-    title: string;
-    content: string;
-    resumeUrl: string;
-    pictureUrl: string;
+  title: string;
+  content: string;
+  resumeUrl: string;
+  pictureUrl: string;
+  blogUrl: string;
 }
 
 export interface Contact {
-    email: string;
-    linkedInHandle: string;
-    githubHandle: string;
+  email: string;
+  linkedInHandle: string;
+  githubHandle: string;
 }
 
 export interface Logo {
-    img: string;
-    name: string;
-    url: string;
+  img: string;
+  name: string;
+  url: string;
 }
 
 export interface TechInfo {
-    title: string;
-    content: string[];
-    logos: Logo[];
+  title: string;
+  content: string[];
+  logos: Logo[];
 }
 
 export interface Pages {
-    about: About;
-    contact: Contact;
-    backendOps: TechInfo;
-    clientTech: TechInfo;
+  about: About;
+  contact: Contact;
+  backendOps: TechInfo;
+  clientTech: TechInfo;
 }
 
 export interface DB {
-    pages: Pages;
+  pages: Pages;
 }
